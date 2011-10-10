@@ -30,6 +30,12 @@ set smarttab
 " Turn on syntax highlighting
 syntax on
 
+" Enable automatic filetype detection, plugin options and indent files.
+filetype plugin indent on
+
+" Set default colorscheme
+colorscheme railscasts
+
 " Highlight column
 set colorcolumn=80
 
@@ -107,3 +113,7 @@ map <D-7> 7gt
 map <D-8> 8gt
 map <D-9> 9gt
 map <D-0> :tablast<CR>
+
+
+" Initialize pathogen to manage plugins
+call pathogen#infect()
