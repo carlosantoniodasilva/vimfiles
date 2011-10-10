@@ -79,13 +79,16 @@ set mouse=a
 " Allow backspacing over everything in insert mode
 "set backspace=indent,eol,start
 
+" Allow backgrounding buffers without unloading/writing them
+set hidden
+
 " Show code completion menu when typing commands
 set wildmenu
 set wildmode=list:longest
 
 " Don't make backup files
 set nobackup
-" Don't use swap files 
+" Don't use swap files
 set noswapfile
 " Where to put swap files
 set directory=/tmp

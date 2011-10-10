@@ -1,0 +1,9 @@
+[submodule "bundle/ack.vim"]
+	path = bundle/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = https://github.com/vim-scripts/Command-T.git
