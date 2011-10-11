@@ -2,8 +2,8 @@
 "This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" Turn on line numbers
-set number
+" Turn on line numbers. Use either number or relativenumber.
+"set number
 
 " Show line number relative to the cursor position
 set relativenumber
@@ -116,6 +116,16 @@ map <D-7> 7gt
 map <D-8> 8gt
 map <D-9> 9gt
 map <D-0> :tablast<CR>
+
+" Key mapping for tab navigation
+nmap <Tab> gt
+nmap <S-Tab> gT
+
+" Key mapping for textmate-like indentation
+nmap <D-[> <<
+nmap <D-]> >>
+vmap <D-[> <gv
+vmap <D-]> >gv
 
 
 " Initialize pathogen to manage plugins
