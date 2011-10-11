@@ -7,3 +7,12 @@
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = https://github.com/vim-scripts/Command-T.git
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = https://github.com/markabe/bufexplorer.git
+[submodule "bundle/snipmate.vim"]
+	path = bundle/snipmate.vim
+	url = https://github.com/rafaelfranca/snipmate.vim.git
+[submodule "snippets"]
+	path = snippets
+	url = git://github.com/carlosantoniodasilva/snipmate-snippets.git

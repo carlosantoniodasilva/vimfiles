@@ -120,3 +120,6 @@ map <D-0> :tablast<CR>
 
 " Initialize pathogen to manage plugins
 call pathogen#infect()
+
+" Snipmate setup
+source ~/.vim/snippets/support_functions.vim
