@@ -119,16 +119,15 @@ map <D-8> 8gt
 map <D-9> 9gt
 map <D-0> :tablast<CR>
 
-" Key mapping for tab navigation
+" Better tab navigation
 nmap <Tab> gt
 nmap <S-Tab> gT
 
-" Key mapping for textmate-like indentation
+" Textmate-like indentation
 nmap <D-[> <<
 nmap <D-]> >>
 vmap <D-[> <gv
 vmap <D-]> >gv
-
 
 " Initialize pathogen to manage plugins
 call pathogen#infect()
@@ -141,3 +140,39 @@ let g:CommandTMaxHeight=20
 
 " Enable syntax error signs
 let g:syntastic_enable_signs=1
+
+" Preserve history and cursor position while executing the given command
+function! Preserve(command)
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  execute a:command
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
+
+function! StripTrailingWhitespaces()
+  call Preserve("%s/\\s\\+$//e")
+endfunction
+nnoremap <silent> <F5> :call StripTrailingWhitespaces()<CR>
+
+function! StripBlankLines()
+  call Preserve("g/^$/d")
+endfunction
+nnoremap <silent> <F6> :call StripBlankLines()<CR>
+
+" Only do this part when compiled with support for autocommands
+if has("autocmd")
+  " [Example] Customisations based on house-style (arbitrary)
+  "autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
+  "autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
+  "autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
+
+  " [Example] Treat .rss files as XML (example)
+  "autocmd BufNewFile,BufRead *.rss setfiletype xml
+
+  autocmd BufWritePre *.rb,*.erb,*.yml,*.css,*.js,*.json,*.html :call StripTrailingWhitespaces()
+endif
