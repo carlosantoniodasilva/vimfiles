@@ -16,3 +16,6 @@
 [submodule "snippets"]
 	path = snippets
 	url = git://github.com/carlosantoniodasilva/snipmate-snippets.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git

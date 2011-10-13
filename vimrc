@@ -16,7 +16,9 @@ set showmode
 
 " Indent width
 set shiftwidth=2
-" Tab width
+" Tab width while viewing
+set tabstop=2
+" Tab width while editing (insert/remove 'tabs')
 set softtabstop=2
 " Auto indent
 set autoindent
@@ -133,3 +135,9 @@ call pathogen#infect()
 
 " Snipmate setup
 source ~/.vim/snippets/support_functions.vim
+
+" Command+T setup
+let g:CommandTMaxHeight=20
+
+" Enable syntax error signs
+let g:syntastic_enable_signs=1
