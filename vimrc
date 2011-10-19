@@ -178,6 +178,6 @@ if has("autocmd")
 endif
 
 " Format json using python json.tool
-function FormatJson()
+function! FormatJson()
   %!python -m json.tool
 endfunction
