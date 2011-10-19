@@ -25,3 +25,6 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/ragtag"]
+	path = bundle/ragtag
+	url = https://github.com/tpope/vim-ragtag.git
