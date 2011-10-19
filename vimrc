@@ -1,3 +1,6 @@
+" Initialize pathogen to manage plugins
+call pathogen#infect()
+
 "Use Vim settings, rather then Vi settings (much better!).
 "This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -130,9 +133,6 @@ nmap <D-[> <<
 nmap <D-]> >>
 vmap <D-[> <gv
 vmap <D-]> >gv
-
-" Initialize pathogen to manage plugins
-call pathogen#infect()
 
 " Snipmate setup
 source ~/.vim/snippets/support_functions.vim
