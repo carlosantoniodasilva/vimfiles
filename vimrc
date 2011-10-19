@@ -70,6 +70,8 @@ set wrap
 " Only wrap in word boundaries (uses breakat regexp)
 " this does not work with the list option enabled
 "set linebreak
+" Shows the elipsis unicode char in wrapped lines
+set showbreak=…
 
 " Display tabs and trailing spaces
 set list
@@ -79,7 +81,7 @@ set listchars=tab:\ ¬,trail:.
 set mouse=a
 
 " Allow backspacing over everything in insert mode
-"set backspace=indent,eol,start
+set backspace=indent,eol,start
 
 " Allow backgrounding buffers without unloading/writing them
 set hidden
