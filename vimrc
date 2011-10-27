@@ -63,7 +63,7 @@ set hlsearch
 " Ignore case in search patterns
 set ignorecase
 " Only use ignore case for search patterns with downcase chars
-"set smartcase
+set smartcase
 
 " Set global substitution by default
 set gdefault
