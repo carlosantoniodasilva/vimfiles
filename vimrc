@@ -91,7 +91,10 @@ set hidden
 
 " Show code completion menu when typing commands
 set wildmenu
+" Set code completion to be similar to the command line
 set wildmode=list:longest
+" Ignore files from listings
+set wildignore=.git,tmp/*
 
 " Don't make backup files
 set nobackup
