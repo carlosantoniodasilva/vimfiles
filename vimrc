@@ -179,7 +179,7 @@ if has("autocmd")
   " [Example] Treat .rss files as XML (example)
   "autocmd BufNewFile,BufRead *.rss setfiletype xml
 
-  autocmd BufWritePre *.rb,*.erb,*.yml,*.css,*.js,*.json,*.html :call StripTrailingWhitespaces()
+  autocmd BufWritePre *.rb,*.rake,*.erb,*.yml,*.css,*.scss,*.sass,*.js,*.json,*.html :call StripTrailingWhitespaces()
 endif
 
 " Format json using python json.tool
