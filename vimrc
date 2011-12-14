@@ -115,6 +115,12 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" disable cursor keys in normal mode
+map <Left>  :echo "no!"<cr>
+map <Right> :echo "no!"<cr>
+map <Up>    :echo "no!"<cr>
+map <Down>  :echo "no!"<cr>
+
 " Use Cmd + N to change tabs
 map <D-1> 1gt
 map <D-2> 2gt
@@ -137,11 +143,33 @@ nmap <D-]> >>
 vmap <D-[> <gv
 vmap <D-]> >gv
 
+" double percentage sign in command mode is expanded
+" to directory of current file - http://vimcasts.org/e/14
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+" Easier editing for split, vertical split and tab based on the current dir
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
+
 " Snipmate setup
 source ~/.vim/snippets/support_functions.vim
 
 " Command+T setup
 let g:CommandTMaxHeight=20
+
+" map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
+" map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
+" map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
+" map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
+" map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
+" map <leader>gg :topleft 100 :split Gemfile<cr>
+
+" search using Command+T but flushing before
+map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+" search using Command+T from the current directory, but flushing before
+map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 
 " Enable syntax error signs
 let g:syntastic_enable_signs=1
