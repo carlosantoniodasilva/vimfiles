@@ -108,6 +108,8 @@ set backupdir=/tmp
 " Disable visual bells / beeps
 set visualbell t_vb=
 
+" Change the leader from \ to ,
+" let mapleader=","
 
 " Use window movement with Ctrl-h instead of Ctrl-w h and so on
 map <C-h> <C-w>h
