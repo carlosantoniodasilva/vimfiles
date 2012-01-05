@@ -169,12 +169,15 @@ let g:CommandTMaxHeight=20
 " map <leader>gg :topleft 100 :split Gemfile<cr>
 
 " search using Command+T but flushing before
-map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+" map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 " search using Command+T from the current directory, but flushing before
-map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
+" map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 
 " Enable syntax error signs
 let g:syntastic_enable_signs=1
+
+" configure zencoding indentation
+let g:user_zen_settings = { 'indentation' : '  ' }
 
 " Preserve history and cursor position while executing the given command
 function! Preserve(command)
