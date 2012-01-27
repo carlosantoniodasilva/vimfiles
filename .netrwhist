@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/carlos/Projects/personal/jmainhardt_betha_docs/schema'
+let g:netrw_dirhist_2='/Users/carlos/Projects/personal/team_alloc/.bundle/gems/gems/devise-2.0.0'
+let g:netrw_dirhist_3='/Users/carlos/Projects/personal/team_alloc/.bundle/gems/gems/devise-2.0.0/lib'
+let g:netrw_dirhist_4='/Users/carlos/Projects/personal/team_alloc/.bundle/gems/gems/devise-2.0.0/lib/devise'
+let g:netrw_dirhist_5='/Users/carlos/Projects/personal/team_alloc/.bundle/gems/gems/devise-2.0.0/lib/devise/models'

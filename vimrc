@@ -96,6 +96,9 @@ set wildmode=list:longest
 " Ignore files from listings
 set wildignore=.git,tmp/*
 
+" Store more :cmdline history
+set history=100
+
 " Don't make backup files
 set nobackup
 " Don't use swap files
