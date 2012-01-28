@@ -52,3 +52,6 @@
 [submodule "bundle/textile"]
 	path = bundle/textile
 	url = https://github.com/timcharper/textile.vim.git
+[submodule "bundle/coffee"]
+	path = bundle/coffee
+	url = https://github.com/kchmck/vim-coffee-script.git
