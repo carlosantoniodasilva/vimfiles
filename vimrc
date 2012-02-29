@@ -94,7 +94,7 @@ set wildmenu
 " Set code completion to be similar to the command line
 set wildmode=list:longest
 " Ignore files from listings
-set wildignore=.git,tmp/*,app/assets/images
+set wildignore=.git,log/*,tmp/*,app/assets/images/*,solr/*
 
 " Store more :cmdline history
 set history=100
