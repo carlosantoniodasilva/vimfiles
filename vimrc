@@ -121,10 +121,10 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " disable cursor keys in normal mode
-map <Left>  :echo "no!"<cr>
-map <Right> :echo "no!"<cr>
-map <Up>    :echo "no!"<cr>
-map <Down>  :echo "no!"<cr>
+map <Left>  :echo ":trollface:"<cr>
+map <Right> :echo ":trollface:"<cr>
+map <Up>    :echo ":trollface:"<cr>
+map <Down>  :echo ":trollface:"<cr>
 
 " Use Cmd + N to change tabs
 map <D-1> 1gt
