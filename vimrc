@@ -186,7 +186,8 @@ let g:CommandTMaxHeight=20
 " Enable syntax error signs
 let g:syntastic_enable_signs=1
 
-" configure zencoding indentation
+" configure zencoding indentation and shortcut
+let g:user_zen_leader_key = '<c-z>'
 let g:user_zen_settings = { 'indentation' : '  ' }
 
 " Preserve history and cursor position while executing the given command
