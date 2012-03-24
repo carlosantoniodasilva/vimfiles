@@ -94,7 +94,7 @@ set wildmenu
 " Set code completion to be similar to the command line
 set wildmode=list:longest
 " Ignore files from listings
-set wildignore=.git,log/*,tmp/*,app/assets/images/*,solr/*
+set wildignore=*/.git/*,*/.bundle/*,*/log/*,*/tmp/*,*/app/assets/images/*,*/solr/*
 
 " Store more :cmdline history
 set history=100
@@ -167,6 +167,9 @@ map <leader>et :tabe %%
 
 " Snipmate setup
 source ~/.vim/snippets/support_functions.vim
+
+" CtrlP - ignore dotfiles and dotdirs
+let g:ctrlp_dotfiles = 0
 
 " Enable syntax error signs
 let g:syntastic_enable_signs=1
