@@ -171,9 +171,6 @@ source ~/.vim/snippets/support_functions.vim
 " CtrlP - ignore dotfiles and dotdirs
 let g:ctrlp_dotfiles = 0
 
-" Enable syntax error signs
-let g:syntastic_enable_signs=1
-
 " configure zencoding indentation and shortcut
 let g:user_zen_leader_key = '<c-z>'
 let g:user_zen_settings = { 'indentation' : '  ' }
