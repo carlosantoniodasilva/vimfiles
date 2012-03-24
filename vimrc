@@ -168,21 +168,6 @@ map <leader>et :tabe %%
 " Snipmate setup
 source ~/.vim/snippets/support_functions.vim
 
-" Command+T setup
-let g:CommandTMaxHeight=20
-
-" map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
-" map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
-" map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
-" map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
-" map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
-" map <leader>gg :topleft 100 :split Gemfile<cr>
-
-" search using Command+T but flushing before
-" map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
-" search using Command+T from the current directory, but flushing before
-" map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
-
 " Enable syntax error signs
 let g:syntastic_enable_signs=1
 
