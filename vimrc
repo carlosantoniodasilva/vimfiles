@@ -170,6 +170,11 @@ source ~/.vim/snippets/support_functions.vim
 
 " CtrlP - ignore dotfiles and dotdirs
 let g:ctrlp_dotfiles = 0
+" CtrlP - height of match window
+let g:ctrlp_max_height = 12
+" CtrlP - change working path mode to use the parent directory only.
+" 0: don't manage; 1: use the parent dir; 2: use the nearest .git/.svn/etc dir
+let g:ctrlp_working_path_mode = 1
 
 " configure zencoding indentation and shortcut
 let g:user_zen_leader_key = '<c-z>'
