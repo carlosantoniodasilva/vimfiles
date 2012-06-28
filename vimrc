@@ -176,6 +176,10 @@ let g:ctrlp_max_height = 12
 " 0: don't manage; 1: use the parent dir; 2: use the nearest .git/.svn/etc dir
 let g:ctrlp_working_path_mode = 0
 
+" RTFPygmentize to copy with format
+let g:rtfp_theme = 'default'
+let g:rtfp_font = 'Monaco'
+
 " configure zencoding indentation and shortcut
 let g:user_zen_leader_key = '<c-z>'
 let g:user_zen_settings = { 'indentation' : '  ' }
