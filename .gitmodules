@@ -9,7 +9,7 @@
 	url = https://github.com/rafaelfranca/snipmate.vim.git
 [submodule "snippets"]
 	path = snippets
-	url = git://github.com/carlosantoniodasilva/snipmate-snippets.git
+	url = https://github.com/carlosantoniodasilva/snipmate-snippets.git
 [submodule "bundle/delimitmate"]
 	path = bundle/delimitmate
 	url = https://github.com/Raimondi/delimitMate.git
