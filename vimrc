@@ -39,7 +39,8 @@ syntax on
 filetype plugin indent on
 
 " Set default colorscheme
-colorscheme railscasts
+" colorscheme railscasts
+colorscheme default
 
 " Highlight column
 set colorcolumn=80
