@@ -156,9 +156,12 @@ map Q <Nop>
 " Disable K looking man stuff up
 map K <Nop>
 
-" double percentage sign in command mode is expanded
+" Double percentage sign in command mode is expanded
 " to directory of current file - http://vimcasts.org/e/14
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+" Clear the search highlight when hitting return
+nnoremap <cr> :nohlsearch<cr>
 
 " Easier editing for split, vertical split and tab based on the current dir
 map <leader>ew :e %%
