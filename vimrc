@@ -79,7 +79,7 @@ set showbreak=…
 
 " Display tabs and trailing spaces
 set list
-set listchars=tab:\ ¬,trail:.
+set listchars=nbsp:¬,tab:\ ¬,trail:.
 
 " Enable mouse
 set mouse=a
