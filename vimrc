@@ -185,7 +185,7 @@ let g:rtfp_theme = 'default'
 let g:rtfp_font = 'Monaco'
 
 " configure zencoding indentation and shortcut
-let g:user_zen_leader_key = '<c-z>'
+let g:user_zen_leader_key = '<c-x>'
 let g:user_zen_settings = { 'indentation' : '  ' }
 
 " Preserve history and cursor position while executing the given command
@@ -314,14 +314,14 @@ function! RunTests(filename)
   " :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
   " :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
   if match(a:filename, '\.feature$') != -1
-    exec ":!script/features " .  a:filename
+    exec ":!script/features " . a:filename
   else
     if filereadable("script/test")
-      exec ":!script/test " .  a:filename
+      exec ":!script/test " . a:filename
     elseif filereadable("Gemfile")
-      exec ":!bundle exec rspec --color " .  a:filename
+      exec ":!bundle exec rspec --color " . a:filename
     else
-      exec ":!rspec --color " .  a:filename
+      exec ":!rspec --color " . a:filename
     end
   end
 endfunction
