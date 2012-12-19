@@ -161,7 +161,7 @@ map K <Nop>
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
 " Clear the search highlight when hitting return
-nnoremap <cr> :nohlsearch<cr>
+nnoremap <cr> :nohlsearch<cr><cr>
 
 " Easier editing for split, vertical split and tab based on the current dir
 map <leader>ew :e %%
