@@ -285,7 +285,7 @@ function! RunTestFile(...)
   endif
 
   " Run the tests for the previously-marked file.
-  let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\)$') != -1
+  let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\|_test.rb\)$') != -1
   if in_test_file
     call SetTestFile()
   elseif !exists("t:grb_test_file")
@@ -314,68 +314,10 @@ function! RunTests(filename)
   " :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
   " :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
   if match(a:filename, '\.feature$') != -1
-    exec ":!script/features " . a:filename
+    exec ":!cucumber " . a:filename
+  elseif match(a:filename, '_spec\.rb$') != -1
+    exec ":!rspec --color " . a:filename
   else
-    if filereadable("script/test")
-      exec ":!script/test " . a:filename
-    elseif filereadable("Gemfile")
-      exec ":!bundle exec rspec --color " . a:filename
-    else
-      exec ":!rspec --color " . a:filename
-    end
-  end
+    exec "!ruby -Itest " . a:filename
+  endif
 endfunction
-
-
-" Test-running stuff, thanks to Ben Orenstein (r00k).
-" function! RunCurrentTest()
-"   let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\|_test.rb\)$') != -1
-"   if in_test_file
-"     call SetTestFile()
-
-"     if match(expand('%'), '\.feature$') != -1
-"       call SetTestRunner("!cucumber")
-"       exec g:bjo_test_runner g:bjo_test_file
-"     elseif match(expand('%'), '_spec\.rb$') != -1
-"       call SetTestRunner("!rspec")
-"       exec g:bjo_test_runner g:bjo_test_file
-"     else
-"       call SetTestRunner("!ruby -Itest")
-"       exec g:bjo_test_runner g:bjo_test_file
-"     endif
-"   else
-"     exec g:bjo_test_runner g:bjo_test_file
-"   endif
-" endfunction
-
-" function! SetTestRunner(runner)
-"   let g:bjo_test_runner=a:runner
-" endfunction
-
-" function! RunCurrentLineInTest()
-"   let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\|_test.rb\)$') != -1
-"   if in_test_file
-"     call SetTestFileWithLine()
-"   end
-
-"   exec "!rspec" g:bjo_test_file . ":" . g:bjo_test_file_line
-" endfunction
-
-" function! SetTestFile()
-"   let g:bjo_test_file=@%
-" endfunction
-
-" function! SetTestFileWithLine()
-"   let g:bjo_test_file=@%
-"   let g:bjo_test_file_line=line(".")
-" endfunction
-
-" function! CorrectTestRunner()
-"   if match(expand('%'), '\.feature$') != -1
-"     return "cucumber"
-"   elseif match(expand('%'), '_spec\.rb$') != -1
-"     return "rspec"
-"   else
-"     return "ruby"
-"   endif
-" endfunction
