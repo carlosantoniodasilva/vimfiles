@@ -318,6 +318,6 @@ function! RunTests(filename)
   elseif match(a:filename, '_spec\.rb$') != -1
     exec ":!rspec --color " . a:filename
   else
-    exec "!ruby -Itest " . a:filename
+    exec "!ruby -w -Itest " . a:filename
   endif
 endfunction
