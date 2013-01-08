@@ -315,7 +315,7 @@ function! RunTests(filename)
   " :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
   if match(a:filename, '\.feature$') != -1
     exec ":!cucumber " . a:filename
-  elseif match(a:filename, '_spec\.rb$') != -1
+  elseif match(a:filename, '_spec\.rb') != -1
     exec ":!rspec --color " . a:filename
   else
     exec "!ruby -w -Itest " . a:filename
