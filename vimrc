@@ -314,7 +314,7 @@ function! RunTests(filename)
   elseif match(a:filename, '_spec\.rb') != -1
     exec ":!rspec --color " . a:filename
   elseif match(a:filename, '_test\.rb') != -1
-    exec "!ruby -w -Itest " . a:filename
+    exec "!ruby -Itest " . a:filename
   else " Assume rspec by default to run the entire suite, instead of using rake.
     exec ":!rspec --color"
   endif
