@@ -112,6 +112,9 @@ set backupdir=/tmp
 " Disable visual bells / beeps
 set visualbell t_vb=
 
+" Always show status bar
+set laststatus=2
+
 " Change the leader from \ to ,
 " let mapleader=","
 
