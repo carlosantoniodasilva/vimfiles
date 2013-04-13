@@ -11,13 +11,6 @@ Use at your own risk ;).
     cd ~/.vim
     git submodule update --init
 
-    // Configure command-t (make sure you run this using the system ruby)
-    // rbenv shell system # for rbenv users
-    // rvm use system # for rvm users
-    cd bundle/command-t/ruby/command-t/
-    ruby extconf.rb
-    make
-
     // Link config files
     ln -s ~/.vim/vimrc ~/.vimrc
     ln -s ~/.vim/gvimrc ~/.gvimrc
