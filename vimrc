@@ -118,6 +118,10 @@ set laststatus=2
 " Change the leader from \ to ,
 " let mapleader=","
 
+" Open new split panes to right and bottom, which feels more natural than vim’s default:
+set splitbelow
+set splitright
+
 " Use window movement with Ctrl-h instead of Ctrl-w h and so on
 map <C-h> <C-w>h
 map <C-j> <C-w>j
