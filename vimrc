@@ -133,11 +133,15 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" disable cursor keys in normal mode
+" Disable cursor keys in normal mode
 map <Left>  :echo ":trollface:"<cr>
 map <Right> :echo ":trollface:"<cr>
 map <Up>    :echo ":trollface:"<cr>
 map <Down>  :echo ":trollface:"<cr>
+
+" Jump to next/previous row in the editor instead of the line when wrapping.
+nmap j gj
+nmap k gk
 
 " Use Cmd + N to change tabs
 map <D-1> 1gt
