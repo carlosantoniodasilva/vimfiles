@@ -185,6 +185,9 @@ map <leader>es :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabe %%
 
+" Copy selection to clipboard
+vmap <Leader>cp :w !pbcopy<CR><CR>
+
 " Snipmate setup
 source ~/.vim/snippets/support_functions.vim
 
