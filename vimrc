@@ -139,7 +139,7 @@ map <Right> :echo ":trollface:"<cr>
 map <Up>    :echo ":trollface:"<cr>
 map <Down>  :echo ":trollface:"<cr>
 
-" Jump to next/previous row in the editor instead of the line when wrapping.
+" Jump to next/previous screen row in the editor instead of the line when wrapping.
 nmap j gj
 nmap k gk
 
@@ -185,8 +185,12 @@ map <leader>es :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabe %%
 
+" No more Ack typing.
+cmap ack Ack
+map <leader>a :Ack 
+
 " Copy selection to clipboard
-vmap <Leader>cp :w !pbcopy<CR><CR>
+vmap <leader>cp :w !pbcopy<CR><CR>
 
 " Reload the config
 nmap <leader>rc :so $MYVIMRC<CR>
@@ -295,9 +299,9 @@ nnoremap <leader>. :call OpenTestAlternate()<cr>
 
 
 " Running tests with few mods, thanks to Gary Bernhardt (garybernhardt).
-map <leader>t :call RunTestFile()<cr>
-map <leader>T :call RunNearestTest()<cr>
-map <leader>a :call RunTests('')<cr>
+map <leader>t  :call RunTestFile()<cr>
+map <leader>T  :call RunNearestTest()<cr>
+map <leader>tt :call RunTests('')<cr>
 
 function! RunTestFile(...)
   if a:0
