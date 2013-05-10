@@ -86,6 +86,9 @@ set listchars=nbsp:¬,tab:\ ¬,trail:.
 " Enable mouse
 set mouse=a
 
+" Switch paste mode with F2 to quickly disable/enable indenting for paste.
+set pastetoggle=<F2>
+
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
