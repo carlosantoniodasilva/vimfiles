@@ -271,7 +271,7 @@ map <leader>n :call RenameFile()<cr>
 " Switch between test and production code, thanks to Gary Bernhardt (garybernhardt).
 function! OpenTestAlternate()
   let new_file = AlternateForCurrentFile()
-  exec ':e ' . new_file
+  exec ':vsp ' . new_file
 endfunction
 
 function! AlternateForCurrentFile()
@@ -299,9 +299,9 @@ nnoremap <leader>. :call OpenTestAlternate()<cr>
 
 
 " Running tests with few mods, thanks to Gary Bernhardt (garybernhardt).
-map <leader>t  :call RunTestFile()<cr>
-map <leader>T  :call RunNearestTest()<cr>
-map <leader>tt :call RunTests('')<cr>
+map <leader>t :call RunTestFile()<cr>
+map <leader>r :call RunNearestTest()<cr>
+map <leader>T :call RunTests('')<cr>
 
 function! RunTestFile(...)
   if a:0
