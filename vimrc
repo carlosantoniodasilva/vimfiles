@@ -5,8 +5,8 @@ call pathogen#infect()
 "This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" Turn on line numbers. Use either number or relativenumber.
-"set number
+" Turn on line numbers.
+set number
 
 " Show line number relative to the cursor position
 set relativenumber
