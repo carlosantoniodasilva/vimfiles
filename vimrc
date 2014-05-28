@@ -210,9 +210,9 @@ let g:ctrlp_working_path_mode = 0
 let g:rtfp_theme = 'default'
 let g:rtfp_font = 'Monaco'
 
-" configure zencoding indentation and shortcut
-let g:user_zen_leader_key = '<c-x>'
-let g:user_zen_settings = { 'indentation' : '  ' }
+" configure emmet indentation and shortcut
+let g:user_emmet_leader_key = '<c-x>'
+let g:user_emmet_settings = { 'indentation' : '  ' }
 
 " Preserve history and cursor position while executing the given command
 function! Preserve(command)
