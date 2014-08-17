@@ -206,6 +206,11 @@ let g:ctrlp_max_height = 12
 " 0: don't manage; 1: use the parent dir; 2: use the nearest .git/.svn/etc dir
 let g:ctrlp_working_path_mode = 0
 
+" Vim-go - disable the autoinstall the necessary go binaries behavior
+let g:go_disable_autoinstall = 1
+" Vim-go - Disable auto fmt on save
+let g:go_fmt_autosave = 0
+
 " RTFPygmentize to copy with format
 let g:rtfp_theme = 'default'
 let g:rtfp_font = 'Monaco'
