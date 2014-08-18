@@ -1,3 +1,6 @@
+" Define which shell to use, it started giving errors after removing boxen.
+set shell=/bin/bash
+
 " Initialize pathogen to manage plugins
 execute pathogen#infect()
 
