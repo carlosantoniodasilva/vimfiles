@@ -34,6 +34,8 @@ set expandtab
 set smartindent
 " Insert/delete blanks according to shiftwidth in the front of lines
 set smarttab
+" Keep some lines visible above/below the cursor while scrolling.
+set scrolloff=2
 
 " Turn on syntax highlighting
 syntax on
