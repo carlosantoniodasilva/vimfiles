@@ -105,7 +105,7 @@ set wildmenu
 " Set code completion to be similar to the command line
 set wildmode=list:longest
 " Ignore files from listings
-set wildignore=*/.git/*,*/.bundle/*,*/vendor/bundle/*,*/vendor/cache/*,*/log/*,*/tmp/*,*/app/assets/images/*,*/solr/*,*/uploads/*,*/pkg/*,tags
+set wildignore=*/.git/*,*/.bundle/*,*/vendor/bundle/*,*/vendor/cache/*,*/log/*,*/tmp/*,*/app/assets/images/*,*/solr/*,*/uploads/*,*/pkg/*,.tags
 
 " Store more :cmdline history
 set history=100
@@ -131,6 +131,9 @@ set laststatus=2
 " Open new split panes to right and bottom, which feels more natural than vim’s default:
 set splitbelow
 set splitright
+
+" Set the default ctags file
+set tags+=.tags
 
 " Use window movement with Ctrl-h instead of Ctrl-w h and so on
 map <C-h> <C-w>h
