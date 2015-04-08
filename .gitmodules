@@ -79,3 +79,6 @@
 [submodule "bundle/go"]
 	path = bundle/go
 	url = https://github.com/fatih/vim-go.git
+[submodule "bundle/elixir"]
+	path = bundle/elixir
+	url = https://github.com/elixir-lang/vim-elixir.git
