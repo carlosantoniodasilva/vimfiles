@@ -74,7 +74,7 @@ set ignorecase
 set smartcase
 
 " Set global substitution by default
-set gdefault
+" set gdefault
 
 " Wrap lines longer than the editor width
 set wrap
