@@ -257,10 +257,11 @@ if has("autocmd")
   "autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
   "autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
 
-  " [Example] Treat .rss files as XML (example)
-  "autocmd BufNewFile,BufRead *.rss setfiletype xml
+  " Treat typescript files as javascript
+  autocmd BufNewFile,BufRead *.ts setfiletype javascript
 
-  autocmd BufWritePre *.rb,*.rake,*.erb,*.yml,*.css,*.scss,*.sass,*.js,*.json,*.coffee,*.html,*.md,*.rdoc,*.textile,*.ex,*.exs,Gemfile :call StripTrailingWhitespaces()
+  " Strip trailing whitespace for the following file extensions
+  autocmd BufWritePre *.rb,*.rake,*.erb,*.yml,*.css,*.scss,*.sass,*.js,*.json,*.coffee,*.ts,*.html,*.md,*.rdoc,*.textile,*.ex,*.exs,Gemfile :call StripTrailingWhitespaces()
 endif
 
 " Format json using python json.tool
