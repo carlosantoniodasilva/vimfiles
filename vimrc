@@ -73,6 +73,9 @@ set ignorecase
 " Only use ignore case for search patterns with downcase chars
 set smartcase
 
+" Use ack instead of grep
+set grepprg=ack
+
 " Set global substitution by default
 " set gdefault
 
