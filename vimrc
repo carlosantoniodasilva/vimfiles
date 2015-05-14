@@ -193,6 +193,9 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 " Clear the search highlight when hitting return
 nnoremap <cr> :nohlsearch<cr><cr>
 
+" Start a global search/replace for the word under cursor
+nnoremap <leader>s :%s/\<<C-r><C-w>\>/
+
 " Easier editing for split, vertical split and tab based on the current dir
 map <leader>ew :e %%
 map <leader>es :sp %%
