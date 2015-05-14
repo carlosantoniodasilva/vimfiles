@@ -186,9 +186,17 @@ map Q <Nop>
 " Disable K looking man stuff up
 map K <Nop>
 
-" Double percentage sign in command mode is expanded
-" to directory of current file - http://vimcasts.org/e/14
-cnoremap %% <C-R>=expand('%:h').'/'<cr>
+" Expand to directory of current file - http://vimcasts.org/e/14
+cnoremap $$ <C-R>=expand('%:h').'/'<cr>
+" Expand to full path (directory + file)
+" ":echo expand('%:p')    /abc/def/my.txt  full path
+cnoremap $% <C-R>=expand('%:p')<cr>
+" Expand to name of file
+" :echo expand('%:t')     my.txt            name of file ('tail')
+cnoremap %% <C-R>=expand('%:t')<cr>
+" Expands to directory name (from the opened folder, not the full path)
+" :echo expand('%:p:h')   /abc/def          directory containing file ('head')
+cnoremap %$ <C-R>=expand('%:p:h').'/'<cr>
 
 " Clear the search highlight when hitting return
 nnoremap <cr> :nohlsearch<cr><cr>
