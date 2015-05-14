@@ -136,7 +136,7 @@ set splitright
 set tags+=.tags
 
 " Use Ctrl+[ to climb back the tree after navigating tags with Ctrl+]
-map <C-[> <C-t>
+" map <C-[> <C-t>
 
 " Use window movement with Ctrl-h instead of Ctrl-w h and so on
 map <C-h> <C-w>h
