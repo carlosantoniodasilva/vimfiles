@@ -279,6 +279,9 @@ if has("autocmd")
 
   " Strip trailing whitespace for the following file extensions
   autocmd BufWritePre *.rb,*.rake,*.erb,*.yml,*.css,*.scss,*.sass,*.js,*.json,*.coffee,*.ts,*.html,*.md,*.rdoc,*.textile,*.ex,*.exs,Gemfile :call StripTrailingWhitespaces()
+
+  " Change indent rules for javascript/typescript
+  autocmd FileType javascript,typescript set shiftwidth=4 tabstop=4 softtabstop=4
 endif
 
 " Format json using python json.tool
