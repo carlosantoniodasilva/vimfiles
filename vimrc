@@ -278,7 +278,7 @@ if has("autocmd")
   " autocmd BufNewFile,BufRead *.ts setfiletype javascript
 
   " Strip trailing whitespace for the following file extensions
-  autocmd BufWritePre *.rb,*.rake,*.erb,*.yml,*.css,*.scss,*.sass,*.js,*.json,*.coffee,*.ts,*.html,*.md,*.rdoc,*.textile,*.ex,*.exs,Gemfile :call StripTrailingWhitespaces()
+  autocmd BufWritePre *.rb,*.rake,*.erb,*.yml,*.css,*.scss,*.sass,*.styl,*.js,*.json,*.coffee,*.ts,*.html,*.md,*.rdoc,*.textile,*.ex,*.exs,Gemfile :call StripTrailingWhitespaces()
 
   " Change indent rules for javascript/typescript
   autocmd FileType javascript,typescript set shiftwidth=4 tabstop=4 softtabstop=4
