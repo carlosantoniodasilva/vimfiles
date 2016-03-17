@@ -220,6 +220,13 @@ vmap <leader>cp :w !pbcopy<CR><CR>
 " Reload the config
 nmap <leader>rc :so $MYVIMRC<CR>
 
+" Commentary original mappings - keep them out for now to see if I can get
+" used to the new `gc`.
+" xmap \\  <Plug>Commentary
+" nmap \\  <Plug>Commentary
+" nmap \\\ <Plug>CommentaryLine
+" nmap \\u <Plug>CommentaryUndo
+
 " Snipmate setup
 source ~/.vim/snippets/support_functions.vim
 
