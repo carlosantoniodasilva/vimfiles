@@ -230,6 +230,11 @@ nmap <leader>rc :so $MYVIMRC<CR>
 " Snipmate setup
 source ~/.vim/snippets/support_functions.vim
 
+" Load a local vimrc file if it's available.
+if filereadable(expand("~/.localvimrc"))
+  source ~/.localvimrc
+endif
+
 " CtrlP - ignore dotfiles and dotdirs
 let g:ctrlp_dotfiles = 0
 " CtrlP - height of match window
