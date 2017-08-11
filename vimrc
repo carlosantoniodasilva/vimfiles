@@ -36,6 +36,8 @@ set smartindent
 set smarttab
 " Keep some lines visible above/below the cursor while scrolling.
 set scrolloff=2
+" Read files back from disk automatically when they've changed
+set autoread
 
 " Turn on syntax highlighting
 syntax on
