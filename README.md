@@ -5,7 +5,7 @@ Use at your own risk ;).
 ## Installing
 
     // Grab the files
-    git clone git://github.com/carlosantoniodasilva/vimfiles.git ~/.vim
+    git clone https://github.com/carlosantoniodasilva/vimfiles.git ~/.vim
 
     // Download plugins with git submodules
     cd ~/.vim
