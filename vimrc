@@ -87,6 +87,8 @@ set wrap
 " this does not work with the list option enabled
 "set linebreak
 " Shows the elipsis unicode char in wrapped lines
+" (requires encoding set to utf-8 to use the utf-8 chars.)
+set encoding=utf-8
 set showbreak=…
 
 " Display tabs and trailing spaces
